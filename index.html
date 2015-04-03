@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Vox2</title>
+
+    <script src="libs/three.min.js"></script>
+    <script src="libs/Stats.js"></script>
+    <script src="libs/perlin.js"></script>
+    <script src="libs/ImprovedNoise.js"></script>
+    <script src="libs/jquery-1.11.1.min.js"></script>
+    <script src="libs/OrbitControls.js"></script>
+    <script src="libs/THREEx.KeyboardState.js"></script>
+    <script src="libs/THREEx.WindowResize.js"></script>
+     <style>
+html, body {
+    cusor: none;
+    background-color: #000000;
+    color: #ffffff;
+    font-family:Monospace;
+    font-size:13px;
+    text-align:center;
+    font-weight: bold;
+
+    background-color: #000000;
+    margin: 0 auto;
+    overflow: hidden; 
+    height: 100%;
+    width: 100%;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+    </style>
+  </head>
+  <body>
+  <div style="position: absolute; z-index: 100;">Mouse to move/zoom around, reload to generate new world.</div>
+
+ <div style="position: relative; z-index: 1; " id="container"></div> 
+<div style="position: absolute; z-index: 100;" id="stats"></div>
+ </div>
+
+ <script src="js/world.js"></script>
+ <script src="js/main.js"></script>
+  </body>
+  <script>
+var game;
+    $(document).ready( function() {
+        game = new Game();
+        game.Init();
+    });
+  </script>
+</html>
